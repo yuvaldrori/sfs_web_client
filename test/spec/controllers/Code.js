@@ -21,13 +21,13 @@ describe('Controller: CodeCtrl', function () {
     expect(scope.second).toMatch(/[\da-z]{4}/);
   });
   it('first should be different from second', function () {
-    expect(scope.first).toNotEqual(scope.second);
+    expect(scope.first).not.toEqual(scope.second);
   });
   it('ddMM should be 00-31 00-12', function () {
     expect(scope.ddMM).toMatch(/[0-3][0-9][0-1][0-9]/);
   });
   it('yyyy should be 4 digit', function () {
-    expect(scope.ddMM).toMatch(/\d{4}/);
+    expect(scope.yyyy).toMatch(/\d{4}/);
   });
   it('folder name should be 16 chars long', function () {
     expect(scope.folderName.length).toEqual(16);

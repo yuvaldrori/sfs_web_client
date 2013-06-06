@@ -28,15 +28,21 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
 
+    <script src="components/jquery/jquery.js"></script>
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/qrcode-generator/js/qrcode.js"></script>
     <script src="components/angular-qrcode/qrcode.js"></script>
+    <script src="components/holderjs/holder.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/Code.js"></script>
+    <script src="scripts/directives/dropzone.js"></script>
+    <script src="scripts/directives/myFileInput.js"></script>
+    <script src="scripts/services/fileListToArr.js"></script>
+    <script src="scripts/services/checkDigit.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
