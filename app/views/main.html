@@ -1,23 +1,28 @@
 <a href="#/code" class="btn">gen code</a>
 <div class="row-fluid" dropzone>
   <div class="span6 text-center">
-    <p>
-      <strong>Welcome!</strong><br>
-      Drag & drop here any photo<br>
-      you wanna share<br>
-      or<br>
-      use the browse button below<br>
-    </p>
-    <my-File-Input text="Browse..."></my-file-Input>
+    <div ng-hide="files">
+      <p>
+        <strong>Welcome!</strong><br>
+        Drag & drop here any photo<br>
+        you wanna share<br>
+        or<br>
+        use the browse button below<br>
+      </p>
+      <my-File-Input text="Browse..."></my-file-Input>
+    </div>
+    <div ng-show="files">
+      <ul class="thumbnails">
+        <li ng-repeat="file in files">
+          <a href="#" class="thumbnail span4">
+            <img ng-src="{{file.src}}"
+                 alt="{{file.name}}"></img>
+          </a>
+        </li>
+      </ul>
+      <my-File-Input text="Add more pics..."></my-file-Input>
+    </div>
   </div>
   <div class="span6">
-    <ul class="thumbnails">
-      <li ng-repeat="file in files">
-        <a href="#" class="thumbnail">
-          <img data-src="holder.js/300x200" alt="{{file.name}}"></img>
-          {{$index}}
-        </a>
-      </li>
-    </ul>
   </div>
 </div>

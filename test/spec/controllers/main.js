@@ -16,7 +16,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('it should have fileListToArr', function () {
-    expect(scope.fileListToArr).toBeDefined();
-  });
+/*  it('it should have', function () {
+    expect(scope).toBeDefined();
+  }); */
 });

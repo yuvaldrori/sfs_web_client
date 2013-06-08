@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('sfsApp')
-  .directive('dropzone', function () {
+  .directive('dropzone', ['fileList', function (fileList) {
     return {
       restrict: 'A',
       link: function postLink(scope, element) {
@@ -17,9 +17,9 @@ angular.module('sfsApp')
           e.stopPropagation();
           e.preventDefault();
           var files = e.originalEvent.dataTransfer.files;
-          scope.files = scope.fileListToArr(files);
+          scope.files = fileList(files);
           scope.$apply();
         });
       }
     };
-  });
+  }]);
