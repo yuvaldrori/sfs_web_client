@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('sfsApp')
-  .controller('CodeCtrl', ['$scope', '$filter', 'checkDigit', function ($scope,
-    $filter, checkDigit) {
+  .controller('CodeCtrl', ['$scope', '$filter', 'checkDigit',
+  function ($scope, $filter, checkDigit) {
     var now = Date.now();
     // generate random \d a-z
     var randomChars = function(digits) {
