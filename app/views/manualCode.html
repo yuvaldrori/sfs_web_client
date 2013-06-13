@@ -1,0 +1,80 @@
+<div class="modal-header">
+</div>
+<div class="modal-body">
+  <div>
+    <img ng-src={{src}}></img>
+  </div>
+  <div>
+    <div>
+      <p>
+      </p>
+    </div>
+    <form name="manualCode" novalidate>
+      <input
+        type="text"
+        class="input-mini"
+        name="ddMM"
+        ng-model="ddMM"
+        required
+        maxlength="4"
+        ng-pattern="/\d{4}/"
+        autocomplete="no"
+        autofocus
+        ng-change="validate()"
+      >
+      </input>
+      <input
+        type="text"
+        class="input-mini"
+        name="yyyy"
+        ng-model="yyyy"
+        required
+        maxlength="4"
+        ng-pattern="/\d{4}/"
+        autocomplete="no"
+        ng-change="validate()"
+      >
+      </input>
+      <input
+        type="text"
+        class="input-mini"
+        name="first"
+        ng-model="first"
+        required
+        maxlength="4"
+        ng-pattern="/[\da-z]{4}/"
+        autocomplete="no"
+        ng-change="validate()"
+      >
+      </input>
+      <input
+        type="text"
+        class="input-mini"
+        name="second"
+        ng-model="second"
+        required
+        maxlength="4"
+        ng-pattern="/[\da-z]{4}/"
+        autocomplete="no"
+        ng-change="validate()"
+      >
+      </input>
+    </form>
+    <div ng-show="manualCode.$valid && invalid" class="alert alert-error">
+      Error typing code!
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button ng-click="close()" class="btn btn-link">
+    Pick a different picture
+  </button>
+  <button
+    ng-click="close()"
+    class="btn btn-primary"
+    ng-disabled="!name"
+  >
+    Submit
+  </button>
+</div>
+

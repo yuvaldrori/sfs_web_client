@@ -1,4 +1,5 @@
 <a href="#/code" class="btn">gen code</a>
+<h1>{{decoded || 'calculating...'}}</h1>
 <div class="row-fluid" dropzone>
   <div class="span6 text-center">
     <div ng-hide="files">
@@ -14,15 +15,22 @@
     <div ng-show="files">
       <ul class="thumbnails">
         <li ng-repeat="file in files">
-          <a href="#" class="thumbnail span4">
-            <img ng-src="{{file.src}}"
-                 alt="{{file.name}}"></img>
-          </a>
+          <upload-image></upload-image>
         </li>
       </ul>
       <my-File-Input text="Add more pics..."></my-file-Input>
     </div>
+    <div>
+      <h1>My Pics</h1>
+    </div>
   </div>
-  <div class="span6">
+  <div class="span6 text-center">
+    <div ng-show="files">
+      <p>Identify the QR code pic<br>
+         to get into the event album</p>
+    </div>
+    <div>
+      <h1>Event Pics</h1>
+    </div>
   </div>
 </div>

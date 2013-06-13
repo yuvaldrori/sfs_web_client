@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('sfsApp', ['monospaced.qrcode'])
+angular.module('sfsApp', ['monospaced.qrcode', 'ui.bootstrap'])
+  .value('qrDecodeErrorString', 'error decoding QR Code')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
