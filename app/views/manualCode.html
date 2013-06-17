@@ -1,14 +1,10 @@
 <div class="modal-header">
-</div>
-<div class="modal-body">
+  <p>
+  hmm... it seems the barcode pic is harder to read than we thought...
+  but no worries! there are 4 color boxes on the barcode pic, just copy them 
+  down here, and we will jump over this hurdle:
+  </p>
   <div>
-    <img ng-src={{src}}></img>
-  </div>
-  <div>
-    <div>
-      <p>
-      </p>
-    </div>
     <form name="manualCode" novalidate>
       <input
         type="text"
@@ -63,6 +59,11 @@
     <div ng-show="manualCode.$valid && invalid" class="alert alert-error">
       Error typing code!
     </div>
+  </div>
+</div>
+<div class="modal-body">
+  <div>
+    <img ng-src={{src}}></img>
   </div>
 </div>
 <div class="modal-footer">

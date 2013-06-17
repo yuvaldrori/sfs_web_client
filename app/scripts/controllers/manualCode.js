@@ -2,10 +2,11 @@
 
 angular.module('sfsApp')
 .controller('ManualCodeCtrl', ['$scope', 'dialog', 'checkDigit', '$location',
-  function ($scope, dialog, checkDigit, $location) {
+  'src', function ($scope, dialog, checkDigit, $location, src) {
 
     $scope.name = undefined;
     $scope.invalid = undefined;
+    $scope.src = src;
 
     $scope.close = function() {
       if ($scope.name) {

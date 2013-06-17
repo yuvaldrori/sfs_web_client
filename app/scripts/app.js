@@ -5,6 +5,7 @@ angular.module('sfsApp', ['monospaced.qrcode', 'ui.bootstrap'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
+        reloadOnSearch: false,
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })

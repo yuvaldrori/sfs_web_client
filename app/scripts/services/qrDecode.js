@@ -6,7 +6,7 @@ angular.module('sfsApp')
 
     return function(src) {
       var deferred = $q.defer();
-      qrcode.callback = function(data) {
+      jsqrcode.callback = function(data) {
         if (data !== qrDecodeErrorString) {
           $rootScope.$apply(function() {
             deferred.resolve(data);
@@ -17,7 +17,7 @@ angular.module('sfsApp')
           });
         };
       };
-      qrcode.decode(src);
+      jsqrcode.decode(src);
       return deferred.promise;
     };
 
